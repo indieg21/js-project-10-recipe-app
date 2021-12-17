@@ -15,7 +15,8 @@
 
 const randomMeal = document.getElementById("random-meal"); //reading the div from the dom. With the id of random-meal id
 
-getRandomMeal(); // displaying the random meal
+ // displaying the random meal
+window.addEventListener('load', getRandomMeal);
 
 //} // async fucntions allows you to download the data asynchronously (while other javascript is running
 
@@ -36,7 +37,7 @@ async function getRandomMeal() {
 function displayRandomMeal(randomMeal, random = false) {
   //recieveing the displayRandomMeal creating a true and false depending only on the data below
   const displayMeal = document.getElementById("display-meal");
-  let menuCard = document.createElement("div");
+  const menuCard = document.createElement("div");
   menuCard.classList.add("meal");
   menuCard.innerHTML = `
     <div class="card">
